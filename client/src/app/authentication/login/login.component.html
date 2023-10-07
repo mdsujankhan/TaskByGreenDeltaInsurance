@@ -20,7 +20,7 @@
                                     <div *ngIf="clicked || loginForm.controls.username?.invalid 
                                     && (loginForm.controls.username?.touched || loginForm.controls.username?.dirty)"
                                         class="invalid-feedback">
-                                        <span *ngIf="loginForm.controls.username?.errors">User id is required</span>
+                                        <span *ngIf="loginForm.controls.username?.errors">User name is required and within [4-20] character. </span>
                                     </div>
                                 </div>
                             </div>
@@ -29,12 +29,12 @@
                             <div class="form-group row mb-3" required="true">
                                 <label for="password" class="col-sm-4 col-form-label">Password<span class="reqField">*</span></label>
                                 <div class="col-sm-12">
-                                    <input type="text" class="form-control" placeholder="Password" formControlName="password"
+                                    <input type="password" class="form-control" placeholder="Password" formControlName="password"
                                         [ngClass]="{ 'is-invalid':clicked && loginForm.controls.password?.invalid}">
                                     <div *ngIf="clicked || loginForm.controls.password?.invalid 
                                     && (loginForm.controls.password?.touched || loginForm.controls.password?.dirty)"
                                         class="invalid-feedback">
-                                        <span *ngIf="loginForm.controls.password?.errors">Password is required</span>
+                                        <span *ngIf="loginForm.controls.password?.errors">Password is required and within [4-24] character.</span>
                                     </div>
                                 </div>
                             </div>

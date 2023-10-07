@@ -46,6 +46,8 @@ public class LoginService {
 	
 	
 	   public static boolean validatePassword(String password) {
+			log.info("Request comes to validate password: [{}]", password);
+
 	        String digitRegex = ".*\\d.*";
 	        String uppercaseRegex = ".*[A-Z].*";
 	        String lowercaseRegex = ".*[a-z].*";

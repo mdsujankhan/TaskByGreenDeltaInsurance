@@ -65,6 +65,4 @@ public class Employee {
 		this.profile_image = profile_image;
 	}
 
-
-
 }

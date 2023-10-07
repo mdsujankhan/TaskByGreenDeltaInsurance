@@ -58,14 +58,7 @@ public class EmployeeService {
 //        List<Employee> employees = response.getData();
 //
 //        return employees;
-//  return null;
 //    }
-
-	public Employee processLogin(Employee emp) {
-		log.info("Request comes to process login");
-
-		return emp;
-	}
 
 	public EmpBasicInfo manageRegistration(EmpBasicInfo basicInfo) {
 		log.info("Requesting to register as a Employee.");

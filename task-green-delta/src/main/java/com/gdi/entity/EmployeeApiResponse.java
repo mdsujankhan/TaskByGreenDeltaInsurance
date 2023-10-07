@@ -3,14 +3,13 @@ package com.gdi.entity;
 import java.util.List;
 
 public class EmployeeApiResponse {
-	
-    private String status;
-    
-    private List<Employee> data;
-    
-    private String message;
-    
-    
+
+	private String status;
+
+	private List<Employee> data;
+
+	private String message;
+
 //Getter Setters
 	public String getStatus() {
 		return status;
@@ -35,5 +34,5 @@ public class EmployeeApiResponse {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-      
+
 }

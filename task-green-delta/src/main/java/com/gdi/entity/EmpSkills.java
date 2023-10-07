@@ -8,23 +8,22 @@ import jakarta.persistence.Id;
 
 @Entity
 public class EmpSkills {
-	
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "skill_id_key")
-    private Long skillId;
-	
-	@Column(name = "skill_name")
-    private String skillName;
-	
-	@Column(name = "experience")
-    private int experience;
-	
-	@Column(name = "skill_level")
-    private String skillLevel;
-	
-//	Getter Setters
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "skill_id_key")
+	private Long skillId;
+
+	@Column(name = "skill_name")
+	private String skillName;
+
+	@Column(name = "experience")
+	private int experience;
+
+	@Column(name = "skill_level")
+	private String skillLevel;
+
+//	Getter Setters
 	public Long getSkillId() {
 		return skillId;
 	}
@@ -56,7 +55,5 @@ public class EmpSkills {
 	public void setSkillLevel(String skillLevel) {
 		this.skillLevel = skillLevel;
 	}
-	
-	
 
 }

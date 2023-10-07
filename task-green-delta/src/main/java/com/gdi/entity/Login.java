@@ -14,13 +14,13 @@ import jakarta.persistence.Transient;
 @Table(name = "t_login")
 public class Login {
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "user_id")
-    private Long id;
-	
+	private Long id;
+
 	@Column(name = "user_name")
 	private String username;
-	
+
 	@Column(name = "password")
 	private String password;
 
@@ -32,9 +32,8 @@ public class Login {
 
 	@Transient
 	private String errMsg;
-	
-	
-	//Getter Setters
+
+	// Getter Setters
 	public String getUsername() {
 		return username;
 	}
@@ -82,7 +81,5 @@ public class Login {
 	public void setErrMsg(String errMsg) {
 		this.errMsg = errMsg;
 	}
-	
-	
 
 }
