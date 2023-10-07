@@ -27,6 +27,8 @@ public class LoginService {
 		Login lg = new Login();
 		log.info("Request comes to process login");
 		
+		boolean isValid = validatePassword(login.getPassword());
+		
 		EmpBasicInfo dbEmp = employeeService.loadEmpInfo(login);
 		if(StringUtils.isBlank(dbEmp.getErrMsg())) {
 			lg.setUsername(login.getUsername());
@@ -41,5 +43,20 @@ public class LoginService {
 		
 		return lg;
 	}
+	
+	
+	   public static boolean validatePassword(String password) {
+	        String digitRegex = ".*\\d.*";
+	        String uppercaseRegex = ".*[A-Z].*";
+	        String lowercaseRegex = ".*[a-z].*";
+	        String specialCharRegex = ".*[@#$%^&+=].*";
+
+	        boolean containsDigit = password.matches(digitRegex);
+	        boolean containsUppercase = password.matches(uppercaseRegex);
+	        boolean containsLowercase = password.matches(lowercaseRegex);
+	        boolean containsSpecialChar = password.matches(specialCharRegex);
+
+	        return containsDigit && containsUppercase && containsLowercase && containsSpecialChar;
+	    }
 
 }
