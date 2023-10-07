@@ -1,0 +1,47 @@
+.reqField {
+    color: red;
+}
+
+
+.plus-sign {
+    font-size: 26px;
+    color: white;
+    box-sizing: border-box;
+    border: 2px solid #1fdeaf;
+    background-color: #1fdeaf;
+}
+
+.trush-sign {
+    font-size: 26px;
+    color: #FF3131;
+    /* box-sizing: border-box;
+    border: 2px solid #FF3131; */
+    background-color: white;
+}
+
+.tableHeader {
+    background: rgb(154, 198, 198);
+    font-size: 16px;
+    text-align: left;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: auto;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+
+.showTable {
+    background: transparent;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-color: hsl(0, 0%, 73%);
+    width: 100%;
+    border-collapse: collapse;
+  }

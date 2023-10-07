@@ -1,0 +1,54 @@
+<div class="container py-5">
+
+    <div class="card shadow">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-8">
+
+                <div class="p-4 p-md-10">
+                    <div class="d-flex">
+                        <div class="w-100">
+                            <h3 class="mb-4">Sign In</h3>
+                        </div>
+                    </div>
+                    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+                            <div class="form-group row mb-2" required="true">
+                                <label for="userId" class="col-sm-4 col-form-label">User Name <span class="reqField">*</span></label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" formControlName="username" placeholder="User Name"
+                                        [ngClass]="{ 'is-invalid':clicked && loginForm.controls.username?.invalid}">
+                                    <div *ngIf="clicked || loginForm.controls.username?.invalid 
+                                    && (loginForm.controls.username?.touched || loginForm.controls.username?.dirty)"
+                                        class="invalid-feedback">
+                                        <span *ngIf="loginForm.controls.username?.errors">User id is required</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row mb-3" required="true">
+                                <label for="password" class="col-sm-4 col-form-label">Password<span class="reqField">*</span></label>
+                                <div class="col-sm-12">
+                                    <input type="text" class="form-control" placeholder="Password" formControlName="password"
+                                        [ngClass]="{ 'is-invalid':clicked && loginForm.controls.password?.invalid}">
+                                    <div *ngIf="clicked || loginForm.controls.password?.invalid 
+                                    && (loginForm.controls.password?.touched || loginForm.controls.password?.dirty)"
+                                        class="invalid-feedback">
+                                        <span *ngIf="loginForm.controls.password?.errors">Password is required</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="form-control btn btn-success rounded submit px-3">Sign
+                                In</button>
+                        </div>
+                    </form>
+                    <p class="text-center mt-2">Not a member? <span (click)="onClickSignUp()"  class="text-info" style="cursor: pointer;">Sign Up </span> </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

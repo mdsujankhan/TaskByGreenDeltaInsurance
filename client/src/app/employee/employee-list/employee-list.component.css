@@ -1,0 +1,39 @@
+
+.tableHeader {
+    background: rgb(154, 198, 198);
+    font-size: 16px;
+    text-align: left;
+}
+
+th {
+    width: auto;
+}
+
+.card-footer {
+    background-color: white;
+}
+
+.card {
+    background: transparent;
+    border-width: 2px 2px 2px 2px;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-color: hsl(0, 0%, 73%);
+  /* border-color: #1fdeaf; */
+}
+
+
+
+table {
+    word-wrap: break-word;
+}
+
+
+.my-custom-scrollbar {
+    position: relative;
+    height: auto;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    }
